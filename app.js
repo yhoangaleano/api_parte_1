@@ -30,6 +30,10 @@ app.use((req, res, next) => {
     next();
 });
 
+//Cargar las routes de la aplicación
+var routeRol = require("./routes/routeRol");
+app.use("/api", routeRol);
+
 app.get("/prueba", function(req, res){
 
     res.status(200).send({
